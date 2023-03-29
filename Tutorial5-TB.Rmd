@@ -32,6 +32,14 @@ ggplot(penguins, aes(x = bill_depth_mm , y = flipper_length_mm, color = species)
   geom_point()
 ```
 
+```{r}
+# Investigating variability accross species
+ggplot(penguins, aes(x = species, y = bill_length_mm, fill=species)) +
+  geom_boxplot(outlier.colour = "blue", outlier.size = 2) +
+  geom_jitter(width=0.2, alpha = 0.5) +
+  labs(title="Penguin Bill Length") +
+  theme_light()
+```
 
 
 
